@@ -1,0 +1,141 @@
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again
+$ touch third.txt
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again
+$ git init
+Initialized empty Git repository in C:/Users/lenovo/Desktop/learn_git_again/.git/
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git add third.txt
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) d41f7af] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit d41f7af02e3a67e01958f9706819a08cef2e960c (HEAD -> master)
+Author: Hazem Maaouia <hazem.maaouia.lfi@gmail.com>
+Date:   Tue Jan 12 14:50:40 2021 +0100
+
+    adding third.txt
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ touch fourth.txt
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git add fourth.txt
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master 2c5c925] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git rm third.txt
+rm 'third.txt'
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "removing third.txt"
+[master 9042aec] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 9042aece662c0ffdb24b609f277a6460d1ddf1f5 (HEAD -> master)
+Author: Hazem Maaouia <hazem.maaouia.lfi@gmail.com>
+Date:   Tue Jan 12 15:03:41 2021 +0100
+
+    removing third.txt
+
+commit 2c5c925aa22806e1b3f4b2a1753c648573273c6b
+Author: Hazem Maaouia <hazem.maaouia.lfi@gmail.com>
+Date:   Tue Jan 12 14:53:20 2021 +0100
+
+    adding fourth.txt
+
+commit d41f7af02e3a67e01958f9706819a08cef2e960c
+Author: Hazem Maaouia <hazem.maaouia.lfi@gmail.com>
+Date:   Tue Jan 12 14:50:40 2021 +0100
+
+    adding third.txt
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager cat
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+user.email=hazem.maaouia.lfi@gmail.com
+user.name=Hazem Maaouia
+core.pager=cat
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+lenovo@DESKTOP-0QB7L8B MINGW64 ~/Desktop/learn_git_again (master)
+$                                                                                                                                                                       
